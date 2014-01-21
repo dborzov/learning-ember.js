@@ -37,4 +37,11 @@ MyApp.VendorModel.FIXTURES = [
 ];
 
 
+MyApp.ApplicationController = Ember.Controller.extend({
+	ApplicationTemplateVariable: 'Bananas'
+});
+
+
+
+
 
