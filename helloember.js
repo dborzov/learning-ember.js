@@ -1,1 +1,4 @@
-# bringeth it on
+window.Todos = Ember.Application.create();
+
+
+
