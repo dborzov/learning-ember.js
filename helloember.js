@@ -24,21 +24,25 @@ MyApp.VendorModel.FIXTURES = [
     },
     {
     	id: 2,
-    	title: 'Colonial Floss Inc',
+    	companyName: 'Colonial Floss Inc',
     	Approved: false,
     	contactEmail: 'info@colonialfloss.com'
     },
     {
     	id:3,
-    	title: 'Executive Toothbrushes, LLC',
+    	companyName: 'Executive Toothbrushes, LLC',
     	Approved: true,
     	contactEmail: 'peter.borzov@gmail.com'
     }
 ];
 
 
-MyApp.ApplicationController = Ember.Controller.extend({
-	ApplicationTemplateVariable: 'Bananas'
+
+// we will now tie LandingPageTemplate to VendorModel
+MyApp.LandingPageTemplateRoute = Ember.Route.extend({
+	model: function () {
+		return this.store.find('VendorModel');
+	}
 });
 
 

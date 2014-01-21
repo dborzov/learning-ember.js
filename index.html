@@ -6,13 +6,16 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h2>Does it compile: {{ApplicationTemplateVariable}}</h2>
-
     <script type="text/x-handlebars" data-template-name="LandingPageTemplate">
+    <h2>Does it compile: {{ApplicationTemplateVariable}}</h2>
     <h1>Landing page reporting in</h1>
     <h1><a href="./table">See the TableTemplate</a></h1>
     <br>
-
+    {{#each}}
+      <li>
+        Name is {{companyName}}
+      </li>
+    {{/each}}
     </script>
 
 
